@@ -12,6 +12,29 @@
     "angular": "^1.6.1"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "cross-platform-desktop",
+    "directories": {
+      "buildResources": "../../assets",
+      "output": "../../dist"
+    },
+    "extraResources": {
+      "from": "bin/dist/",
+      "to": "bin/dist/",
+      "filter": [
+        "**/*"
+      ]
+    },
+    "mac": {
+          "category": "cross-platform-desktop"
+        },
+    "win": {
+      "target": [
+          "nsis"
+        ]
+      }
   }
 }

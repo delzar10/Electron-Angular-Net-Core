@@ -64,9 +64,9 @@ var apiProcess = null;
 function startApi() {
   var proc = require('child_process').spawn;
   //  run server
-  var apipath = path.join(__dirname, '..\\api\\bin\\dist\\win\\api.exe')
+  var apipath = path.join(__dirname, 'bin\\dist\\win\\ElectronAngularNetCore.git.exe')
   if (os.platform() === 'darwin') {
-    apipath = path.join(__dirname, '..//api//bin//dist//osx//Api')
+    apipath = path.join(__dirname, 'bin//dist//osx//ElectronAngularNetCore.git')
   }
 
   console.log(apipath);
